@@ -68,6 +68,7 @@ if __name__ == '__main__':
 		else:
 			answer.append([point[0],'Not include'])
 
-	for elem in answer: 
-		print(elem)
+	import pandas as pd
+	my_df = pd.DataFrame(answer)
+	my_df.to_csv('address_checked.csv', index=False, header=False)
 
